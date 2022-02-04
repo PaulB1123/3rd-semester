@@ -24,6 +24,8 @@ function loadProductType(prodType) {
     });
 }
 
+// var movie = document.getElementById("movie");
+// movie.className += " hidden";
 // clone the template that we have for the 3 elements
 
 function handleData(data) {
@@ -33,14 +35,14 @@ function handleData(data) {
     console.log(data);
     const template = document.querySelector("template").content;
     const clone = template.cloneNode(true);
-    clone.querySelector(".actor").textContent = data.fullname;
-    clone.querySelector(".movie").textContent = data.movie;
+    clone.querySelector(".actor").textContent = "Actor: " + data.fullname;
+    // clone.querySelector(".movie").textContent = data.movie;
     clone.querySelector(".actor").addEventListener("click", myFunction);
-    clone.querySelector(".movie").addEventListener("click", myFunction);
+    // clone.querySelector(".movie").addEventListener("click", myFunction);
     mainSec.appendChild(clone);
 
     function myFunction() {
-      alert("Actor:" + " " + data.fullname + "    " + "Movie:" + " " + data.movie);
+      alert("Movie:" + " " + data.movie);
     }
   });
 }

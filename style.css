@@ -29,3 +29,7 @@ main {
         grid-template: auto / auto auto auto;
 
 }
+
+.hidden {
+    display: none;
+} 
